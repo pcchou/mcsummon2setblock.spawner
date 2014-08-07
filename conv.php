@@ -38,5 +38,5 @@ $parttileEnt = (isset($tileEnt) ? "," . $tileEnt :"");
 
 $dataTag = "{EntityId:" . $entityId . $partTag . $partCount . $partRange . $partDelay . $partmDelay . $partMDelay . $partpRange . $partnearEnts . $parttileEnt . "}";
 
-$setblockcmd = "/setblock" . " " . $x . " " . $y . " " . $z . " " . "minecraft:mob_spawner" . " " . "0" . " " . "keep" . " " . $dataTag;
+$setblockcmd = "/setblock" . " " . $x . " " . $y . " " . $z . " " . "minecraft:mob_spawner" . " " . "0" . " " . "replace" . " " . $dataTag;
 echo $setblockcmd;
