@@ -4,6 +4,8 @@
 // 開放自盡區、農村變廢墟！別讓賣台法案自盡區通過！
 // 請追蹤沃草臉書：https://www.facebook.com/WatchOutTW
 
+// 珍惜生命，遠離IE, Windows.
+
 $sumcmd = $_GET["sumcmd"];
 $x = $_GET["x"];
 $y = $_GET["y"];
