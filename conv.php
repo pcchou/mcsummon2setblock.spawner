@@ -28,7 +28,7 @@ if($cmd != "/summon" and $cmd != "summon"){
     trigger_error("WTFWTFWTFWTFWTFWTF",E_USER_ERROR);
 }
 
-$partTag = (((isset($entityTag) and $entityTag != "") )? ",SpawnData:" . $entityTag :"");
+$partTag = (((isset($entityTag) and $entityTag != "")) ? ",SpawnData:" . $entityTag :"");
 $partCount = ((isset($sCount) and $sCount != "") ? ",SpawnCount:" . $sCount :"");
 $partRange = ((isset($sRange) and $sRange != "") ? ",SpawnRange:" . $sRange :"");
 $partDelay = ((isset($sDelay) and $sDelay != "") ? ",Delay:" . $sDelay :"");

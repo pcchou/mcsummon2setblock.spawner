@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Minecraft Summon指令轉Setblock生怪箱指令</title>
+  </head>
+  <body>
+    <h1>Minecraft Summon指令轉Setblock生怪箱指令</h1>
+    <form name="summonForm" method="GET" action="conv.php">
+      <h2>Summon指令</h2>
+      <textarea rows="3" cols="50" name="sumcmd"></textarea><br><br>
+      <h2>其他東西</h2>
+      x：<input type="text" maxlength="8" size="5" name="x" pattern="[0-9]{0,8}">  y：<input type="text" maxlength="3" size="3" name="y" pattern="[0-9]{0,3}">  z：<input type="text" maxlength="8" size="5" name="z" pattern="[0-9]{0,8}"><br>
+      SpawnCount：<input type="text" maxlength="5" size="5" name="count" pattern="[0-9]{0,5}"><br>
+      SpawnRange：<input type="text" maxlength="5" size="5" name="range" pattern="[0-9]{0,5}"><br>
+      Delay：<input type="text" maxlength="5" size="5" name="delay" pattern="[0-9]{0,5}"><br>
+      MinSpawnDelay：<input type="text" maxlength="5" size="5" name="mdelay" pattern="[0-9]{0,5}"><br>
+      MaxSpawnDelay：<input type="text" maxlength="5" size="5" name="Mdelay" pattern="[0-9]{0,5}"><br>
+      RequiredPlayerRange：<input type="text" maxlength="5" size="5" name="prange" pattern="[0-9]{0,5}"><br>
+      MaxNearbyEntities：<input type="text" maxlength="5" size="5" name="nearents" pattern="[0-9]{0,5}"><br>
+      <input type="submit">
+  </body>
+</html>
