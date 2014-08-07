@@ -7,9 +7,9 @@
 // 珍惜生命，遠離IE, Windows.
 
 $sumcmd = $_GET["sumcmd"];
-$x = $_GET["x"];
-$y = $_GET["y"];
-$z = $_GET["z"];
+$x = (isset($_GET["x"]) and $_GET["x"] != "" ? $_GET["x"] : "~");
+$y = (isset($_GET["y"]) and $_GET["y"] != ""  ? $_GET["y"] : "~");
+$z = (isset($_GET["z"]) and $_GET["z"] != ""  ? $_GET["z"] : "~");
 $sCount = $_GET["count"];
 $sRange = $_GET["range"];
 $sDelay = $_GET["delay"];
@@ -28,15 +28,15 @@ if($cmd != "/summon" and $cmd != "summon"){
     trigger_error("WTFWTFWTFWTFWTFWTF",E_USER_ERROR);
 }
 
-$partTag = (isset($entityTag) ? ",SpawnData:" . $entityTag :"");
-$partCount = (isset($sCount) ? ",SpawnCount:" . $sCount :"");
-$partRange = (isset($sRange) ? ",SpawnRange:" . $sRange :"");
-$partDelay = (isset($sDelay) ? ",Delay:" . $sDelay :"");
-$partmDelay = (isset($mDelay) ? ",MinSpawnDelay:" . $mDelay :"");
-$partMDelay = (isset($MDelay) ? ",MaxSpawnDelay:" . $Mdelay :"");
-$partpRange = (isset($pRange) ? ",RequiredPlayerRange:" . $pRange :"");
-$partnearEnts = (isset($nearEnts) ? ",MaxNearbyEntities:" . $nearEnts :"");
-$parttileEnt = (isset($tileEnt) ? "," . $tileEnt :"");
+$partTag = (((isset($entityTag) and $entityTag != "") )? ",SpawnData:" . $entityTag :"");
+$partCount = ((isset($sCount) and $sCount != "") ? ",SpawnCount:" . $sCount :"");
+$partRange = ((isset($sRange) and $sRange != "") ? ",SpawnRange:" . $sRange :"");
+$partDelay = ((isset($sDelay) and $sDelay != "") ? ",Delay:" . $sDelay :"");
+$partmDelay = ((isset($mDelay) and $mDelay != "") ? ",MinSpawnDelay:" . $mDelay :"");
+$partMDelay = ((isset($MDelay) and $MDelay != "") ? ",MaxSpawnDelay:" . $Mdelay :"");
+$partpRange = ((isset($pRange) and $pRange != "") ? ",RequiredPlayerRange:" . $pRange :"");
+$partnearEnts = ((isset($nearEnts) and $nearEnts != "") ? ",MaxNearbyEntities:" . $nearEnts :"");
+$parttileEnt = ((isset($tileEnt) and $tileEnt != "") ? "," . $tileEnt :"");
 
 $dataTag = "{EntityId:" . $entityId . $partTag . $partCount . $partRange . $partDelay . $partmDelay . $partMDelay . $partpRange . $partnearEnts . $parttileEnt . "}";
 
