@@ -7,9 +7,9 @@
 // 珍惜生命，遠離IE, Windows.
 
 $sumcmd = $_GET["sumcmd"];
-$x = (isset($_GET["x"]) and $_GET["x"] != "" ? $_GET["x"] : "~");
-$y = (isset($_GET["y"]) and $_GET["y"] != ""  ? $_GET["y"] : "~");
-$z = (isset($_GET["z"]) and $_GET["z"] != ""  ? $_GET["z"] : "~");
+$x = ((isset($_GET["x"]) and $_GET["x"] != "") ? $_GET["x"] : "~");
+$y = ((isset($_GET["y"]) and $_GET["y"] != "")  ? $_GET["y"] : "~");
+$z = ((isset($_GET["z"]) and $_GET["z"] != "")  ? $_GET["z"] : "~");
 $sCount = $_GET["count"];
 $sRange = $_GET["range"];
 $sDelay = $_GET["delay"];
