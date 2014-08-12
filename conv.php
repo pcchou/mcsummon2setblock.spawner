@@ -21,7 +21,7 @@ $nearEnts = $_GET["nearents"];
 $cmdparts = explode(" ",$sumcmd);
 $cmd = $cmdparts[0];
 $entityId = $cmdparts[1];
-$entityTag = $cmdparts[5];
+$entityTag = ((isset($cmdparts["5"]) and $cmdparts["5"] != "")  ? $cmdparts["5"] : "");
 
 if($cmd != "/summon" and $cmd != "summon"){
     trigger_error("WTFWTFWTFWTFWTFWTF",E_USER_ERROR);
