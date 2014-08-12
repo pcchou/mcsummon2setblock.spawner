@@ -17,7 +17,6 @@ $mDelay = $_GET["mdelay"];
 $MDelay = $_GET["Mdelay"];
 $pRange = $_GET["prange"];
 $nearEnts = $_GET["nearents"];
-$tileEnt = $_GET["tileent"];
 
 $cmdparts = explode(" ",$sumcmd);
 $cmd = $cmdparts[0];
@@ -36,9 +35,8 @@ $partmDelay = ((isset($mDelay) and $mDelay != "") ? ",MinSpawnDelay:" . $mDelay 
 $partMDelay = ((isset($MDelay) and $MDelay != "") ? ",MaxSpawnDelay:" . $Mdelay :"");
 $partpRange = ((isset($pRange) and $pRange != "") ? ",RequiredPlayerRange:" . $pRange :"");
 $partnearEnts = ((isset($nearEnts) and $nearEnts != "") ? ",MaxNearbyEntities:" . $nearEnts :"");
-$parttileEnt = ((isset($tileEnt) and $tileEnt != "") ? "," . $tileEnt :"");
 
-$dataTag = "{EntityId:" . $entityId . $partTag . $partCount . $partRange . $partDelay . $partmDelay . $partMDelay . $partpRange . $partnearEnts . $parttileEnt . "}";
+$dataTag = "{EntityId:" . $entityId . $partTag . $partCount . $partRange . $partDelay . $partmDelay . $partMDelay . $partpRange . $partnearEnts . "}";
 
 $setblockcmd = "/setblock" . " " . $x . " " . $y . " " . $z . " " . "minecraft:mob_spawner" . " " . "0" . " " . "replace" . " " . $dataTag;
 echo $setblockcmd;
